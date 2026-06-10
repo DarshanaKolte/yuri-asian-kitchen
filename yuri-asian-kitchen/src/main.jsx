@@ -153,8 +153,36 @@ function App() {
 
     <section className="section reviews"><div className="section-title"><p>Customer love</p><h2>Luxury proof section for trust.</h2></div><div className="review-grid">{['Flavorful and authentic Asian cuisine with a cozy ambience.', 'Bao buns and lotus stem are the kind of dishes people recommend.', 'Affordable, polite staff and a location that is easy to visit near Akurdi station.'].map((r,i)=><motion.div className="review" key={i} whileHover={{ y: -8 }}><div>★★★★★</div><p>{r}</p></motion.div>)}</div></section>
 
-    <section id="contact" className="contact"><div><h2>Visit {restaurant.name} - {restaurant.tagline}</h2><p><MapPin size={18}/>{restaurant.shortAddress}</p><p><Clock size={18}/>{restaurant.hours}</p><p><Phone size={18}/>{restaurant.phoneDisplay}</p></div><div className="contact-actions"><a className="btn primary" href={`tel:${restaurant.phone}`}><Phone size={18}/> Call</a><a className="btn ghost" href={`https://wa.me/${restaurant.phone.replace('+','')}`}><MessageCircle size={18}/> WhatsApp</a><a className="btn ghost" href={restaurant.instagram}><Instagram size={18}/> Instagram</a></div></section>
-  </main>;
+   <section id="contact" className="contact">
+  <div>
+    <h2>Visit {restaurant.name} - {restaurant.tagline}</h2>
+    <p><MapPin size={18} />{restaurant.shortAddress}</p>
+    <p><Clock size={18} />{restaurant.hours}</p>
+    <p><Phone size={18} />{restaurant.phoneDisplay}</p>
+  </div>
+
+  <div className="contact-actions">
+    <a className="btn primary" href={`tel:${restaurant.phone}`}>
+      <Phone size={18} /> Call
+    </a>
+
+    <a
+      className="btn ghost"
+      href={`https://wa.me/${restaurant.phone.replace('+', '')}`}
+    >
+      <MessageCircle size={18} /> WhatsApp
+    </a>
+
+    <a
+      className="btn ghost"
+      href={restaurant.instagram}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      📸 Instagram
+    </a>
+  </div>
+</section>
 }
 
 createRoot(document.getElementById('root')).render(<App />);
