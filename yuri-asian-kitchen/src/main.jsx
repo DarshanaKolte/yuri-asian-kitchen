@@ -183,6 +183,7 @@ function App() {
     </a>
   </div>
 </section>
+    </main>;
 }
 
 createRoot(document.getElementById('root')).render(<App />);
