@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
-import { CalendarDays, Clock, Instagram, MapPin, MessageCircle, Phone, Sparkles, Star, Utensils, ArrowRight, Flame, ChefHat } from 'lucide-react';
+import { CalendarDays, Clock, MapPin, MessageCircle, Phone, Sparkles, Star, Utensils, ArrowRight, Flame, ChefHat } from 'lucide-react';
 import './styles.css';
 
 const restaurant = {
